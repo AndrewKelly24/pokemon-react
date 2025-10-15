@@ -71,13 +71,30 @@ Before running the project, ensure you have the following installed:
 
 ```
 pokemon-search-app/
-├── components/          # Reusable React components (TypeScript)
-├── pages/              # Next.js pages (routes, .tsx files)
-├── public/             # Static assets (images, etc.)
-├── styles/             # Tailwind CSS or custom styles
-├── package.json        # Project dependencies and scripts
-├── README.md           # This file
-├── tsconfig.json       # TypeScript configuration
+├── src/
+│   ├── app/                  # Next.js app directory (routing)
+│   │   ├── dashboard/        # Dashboard route
+│   │   │   ├── dataFetch.tsx # Data fetching component
+│   │   │   └── page.tsx      # Dashboard page
+│   │   ├── layout.tsx        # Root layout component
+│   │   └── page.tsx          # Home page
+│   ├── components/           # Reusable React components (TypeScript)
+│   │   ├── app-sidebar.tsx   # Sidebar for app navigation
+│   │   ├── search-form.tsx   # Search form component
+│   │   └── ui/               # Shadcn/UI components
+│   │       ├── button.tsx
+│   │       ├── input.tsx
+│   │       └── dropdown-menu.tsx
+│   ├── hooks/                # Custom React hooks
+│   │   └── use-mobile.ts     # Hook for mobile detection
+│   └── lib/                  # Utility functions
+│       └── utils.ts
+├── public/                   # Static assets (images, icons)
+├── components.json           # Shadcn/UI configuration
+├── next.config.ts           # Next.js configuration
+├── tsconfig.json            # TypeScript configuration
+├── package.json             # Project dependencies and scripts
+└── README.md                # Project documentation
 ```
 
 ## Usage
